@@ -9,25 +9,30 @@ namespace WeekMCCapp.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-		private ObservableCollection<Car> _cars;
-		public ObservableCollection<Car> Cars
-		{
-			get
-			{
-				return _cars;
-			}
-			set
-			{
-				SetProperty(ref _cars, value);
-				OnPropertyChanged("Products");
-			}
-		}
+		public ObservableCollection<Car> Cars { get; set; }
+		
 		public AboutViewModel()
         {
             Title = "Gegevens";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
-        }
+            Cars = new ObservableCollection<Car>();
 
-        public ICommand OpenWebCommand { get; }
+            Cars.Add(new Car(
+                    "Seat",
+                    "Ibiza",
+                    "43-LH-KL",
+                    2300L,
+                    1032L,
+                    DateTime.Today
+                ));
+
+			Cars.Add(new Car(
+					"Ford",
+					"Mondeo",
+					"17-TBZ-7",
+					2540L,
+					1250L,
+					DateTime.Today
+				));
+		}
     }
 }
