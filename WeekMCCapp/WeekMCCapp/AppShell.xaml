@@ -78,11 +78,20 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+	<FlyoutItem Title="Home">
+		<ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
+	</FlyoutItem>
+	<FlyoutItem Title="Gegevens">
+        <ShellContent Route="GegevenPage" ContentTemplate="{DataTemplate local:GegevensPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="FizzBuzz">
-        <ShellContent Route="NewItemPage" ContentTemplate="{DataTemplate local:NewItemPage}" />
+	<FlyoutItem Title="Betaling">
+		<ShellContent Route="BetalingPage" ContentTemplate="{DataTemplate local:BetalingPage}" />
+	</FlyoutItem>
+	<FlyoutItem Title="Automatisch incasso">
+		<ShellContent Route="IncassoPage" ContentTemplate="{DataTemplate local:IncassoPage}" />
+	</FlyoutItem>
+	<FlyoutItem Title="FizzBuzz">
+        <ShellContent Route="FizzBuzzPage" ContentTemplate="{DataTemplate local:FizzBuzzPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

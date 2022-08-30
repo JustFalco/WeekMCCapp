@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="WeekMCCapp.Views.AboutPage"
+			 x:Class="WeekMCCapp.Views.GegevensPage"
 			 xmlns:vm="clr-namespace:WeekMCCapp.ViewModels" 
 			 xmlns:model="clr-namespace:WeekMCCapp.Models"
 			 Title="{Binding Title}">
 	
 	<ContentPage.BindingContext>
-		<vm:AboutViewModel />
+		<vm:GegevensViewModel />
 	</ContentPage.BindingContext>
 
 	<ContentPage.Resources>
@@ -33,23 +33,27 @@
 					<Label Text="Postcode: {1234AB}" FontSize="Default" TextColor="{StaticResource Text}"/>
 					<Label Text="Provincie:" FontSize="Default" TextColor="{StaticResource Text}"/>
 					<Label Text="Aanal auto's: " FontSize="Default" TextColor="{StaticResource Text}"/>
+					<Button Text="Wijzigen" Margin="10,0"/>
+				</StackLayout>
+
+				<StackLayout>
+					<Label Text="" FontSize="Default" TextColor="White"/>
+					<Label Text="Auto's" FontSize="Title" TextColor="Black"/>
+					<ListView ItemsSource="{Binding Cars}" BackgroundColor="Transparent">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ViewCell>
+									<FlexLayout Direction="Column" BackgroundColor="Transparent">
+										<Label Text="{Binding Merk, StringFormat='Merk: {0} '}" TextColor="Black" FontSize="Default"/>
+										<Label Text="{Binding Uitvoering, StringFormat='Uitvoering: {0}'}" TextColor="Black" FontSize="Default"/>
+									</FlexLayout>
+								</ViewCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+									
 				</StackLayout>
                 
-				
-                <Label Text="" FontSize="Default" TextColor="White"/>
-				<Label Text="Auto's" FontSize="Title" TextColor="Black"/>
-				<ListView ItemsSource="{Binding Cars}">
-					<ListView.ItemTemplate>
-						<DataTemplate>
-							<ViewCell>
-								<FlexLayout Direction="Column">
-									<Label Text="{Binding Merk, StringFormat='Merk: {0} '}" TextColor="Black" FontSize="Default"/>
-									<Label Text="{Binding Uitvoering, StringFormat='Uitvoering: {0}'}" TextColor="Black" FontSize="Default"/>
-								</FlexLayout>
-							</ViewCell>
-						</DataTemplate>
-					</ListView.ItemTemplate>
-				</ListView>
                 
             </StackLayout>
 		</Grid>

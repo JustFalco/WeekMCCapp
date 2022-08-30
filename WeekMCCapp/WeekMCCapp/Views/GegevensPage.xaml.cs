@@ -5,11 +5,11 @@ using Xamarin.Forms.Xaml;
 
 namespace WeekMCCapp.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class GegevensPage : ContentPage
     {
-        public AboutPage()
+        public GegevensPage()
         {
-            InitializeComponent();
-        }
+			InitializeComponent();
+		}
     }
 }

@@ -9,16 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace WeekMCCapp.Views
 {
-    public partial class NewItemPage : ContentPage
+    public partial class FizzBuzzPage : ContentPage
     {
-        public Item Item { get; set; }
-
         public string FizzBuzz { get; set; }
 
-        public NewItemPage()
+        public FizzBuzzPage()
         {
-            InitializeComponent();
-            BindingContext = new NewItemViewModel();
+			InitializeComponent();
             FizzBuzz = "test";
         }
 

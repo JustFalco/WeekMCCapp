@@ -11,9 +11,12 @@ namespace WeekMCCapp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-        }
+            Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
+            Routing.RegisterRoute(nameof(BetalingPage), typeof(BetalingPage));
+			Routing.RegisterRoute(nameof(GegevensPage), typeof(GegevensPage));
+			Routing.RegisterRoute(nameof(IncassoPage), typeof(IncassoPage));
+			Routing.RegisterRoute(nameof(FizzBuzzPage), typeof(FizzBuzzPage));
+		}
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {

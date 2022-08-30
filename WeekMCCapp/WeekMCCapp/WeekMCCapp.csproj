@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KentekenApi" Version="1.0.0" />
     <PackageReference Include="SimpleLPR" Version="0.0.39" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />  
@@ -14,8 +13,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\GegevensPage.xaml.cs">
+      <DependentUpon>GegevensPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\FizzBuzzPage.xaml.cs">
       <DependentUpon>FizzBuzzPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BetalingPage.xaml.cs">
+      <DependentUpon>BetalingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\IncassoPage.xaml.cs">
+      <DependentUpon>IncassoPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\BetalingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\IncassoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

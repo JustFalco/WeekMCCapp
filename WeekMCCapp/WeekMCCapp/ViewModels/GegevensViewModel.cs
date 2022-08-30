@@ -7,11 +7,11 @@ using Xamarin.Forms;
 
 namespace WeekMCCapp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class GegevensViewModel : BaseViewModel
     {
 		public ObservableCollection<Car> Cars { get; set; }
 		
-		public AboutViewModel()
+		public GegevensViewModel()
         {
             Title = "Gegevens";
             Cars = new ObservableCollection<Car>();

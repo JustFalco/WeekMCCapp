@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeekMCCapp.Views.HomePage"
+             Title="Home">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Motorrijtuigenbelasting" FontSize="Title" TextColor="Black" />
+		<FlexLayout Margin="10" Direction="Column">
+			<StackLayout>
+				<Button Text="Gegevens wijzigen/ bekijken" Margin="5" />
+				<Button Text="Betaling uitvoeren" Margin="5" />
+				<Button Text="Betaling uitvoeren" Margin="5" />
+				<Label Text="Eerst volgende betaling: €120" Margin="0,15,0,0" TextColor="Black" FontSize="Medium"/>
+				<Label Text="Te betalen voor: 29 oktober 2001" Margin="0,-5,0,0" TextColor="DarkGray" FontSize="Micro"/>
+			</StackLayout>
+			<StackLayout BackgroundColor="LightBlue" Margin="30,0">
+
+			</StackLayout>
+		</FlexLayout>
+    </StackLayout>
+    
+</ContentPage>

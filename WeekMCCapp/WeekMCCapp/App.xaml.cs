@@ -1,5 +1,4 @@
 ﻿using System;
-using WeekMCCapp.Services;
 using WeekMCCapp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,6 @@ namespace WeekMCCapp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
