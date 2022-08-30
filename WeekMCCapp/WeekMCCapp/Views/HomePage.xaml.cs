@@ -9,6 +9,7 @@ namespace WeekMCCapp.Views
         public HomePage()
         {
 			InitializeComponent();
+            this.BindingContext = new HomeViewModel();
 		}
     }
 }

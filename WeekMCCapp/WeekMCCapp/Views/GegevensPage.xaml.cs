@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using WeekMCCapp.ViewModels;
 
 namespace WeekMCCapp.Views
 {
@@ -10,6 +11,7 @@ namespace WeekMCCapp.Views
         public GegevensPage()
         {
 			InitializeComponent();
+            this.BindingContext = new GegevensViewModel();
 		}
     }
 }
