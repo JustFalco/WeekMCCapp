@@ -28,6 +28,9 @@
     <Compile Update="Views\IncassoPage.xaml.cs">
       <DependentUpon>IncassoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\CarSubmitPage.xaml.cs">
+      <DependentUpon>CarSubmitPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +38,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\IncassoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CarSubmitPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

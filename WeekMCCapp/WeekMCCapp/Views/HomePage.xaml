@@ -14,7 +14,7 @@
         <Label Text="Motorrijtuigenbelasting" FontSize="Title" TextColor="Black" />
 		<FlexLayout Margin="10" Direction="Column">
 			<StackLayout>
-				<Button Text="Gegevens wijzigen/ bekijken" Margin="5" Command="{Binding GegevensCommand}"/>
+				<Button Text="Gegevens bekijken" Margin="5" Command="{Binding GegevensCommand}"/>
 				<Button Text="Betaling uitvoeren" Margin="5" Command="{Binding BetalingCommand}"/>
 				<Button Text="Automatisch incasso aanvragen" Margin="5" Command="{Binding IncassoCommand}"/>
 				<Label Text="Eerst volgende betaling: €120" Margin="0,15,0,0" TextColor="Black" FontSize="Medium"/>

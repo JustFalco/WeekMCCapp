@@ -11,10 +11,12 @@ namespace WeekMCCapp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
-            Routing.RegisterRoute(nameof(BetalingPage), typeof(BetalingPage));
+			Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+			Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
 			Routing.RegisterRoute(nameof(GegevensPage), typeof(GegevensPage));
+			Routing.RegisterRoute(nameof(BetalingPage), typeof(BetalingPage));
 			Routing.RegisterRoute(nameof(IncassoPage), typeof(IncassoPage));
+			Routing.RegisterRoute(nameof(CarSubmitPage), typeof(CarSubmitPage));
 			Routing.RegisterRoute(nameof(FizzBuzzPage), typeof(FizzBuzzPage));
 		}
 

@@ -24,38 +24,49 @@
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+				<Label Text="Persoonsgegevens" FontSize="Title" TextColor="{StaticResource Text}"/>
+				<Button Text="Auto toevoegen" Command="{Binding AddCarCommand}"/>
+				<Button Text="Gegevens wijzigen" />
 				<StackLayout>
-					<Label Text="Persoonsgegevens" FontSize="Title" TextColor="{StaticResource Text}"/>
-					<Label Text="Naam:" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Geboortedatum: {dd-mm-yyyy}" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Adres:" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Plaats:" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Postcode: {1234AB}" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Provincie:" FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Label Text="Aanal auto's: " FontSize="Default" TextColor="{StaticResource Text}"/>
-					<Button Text="Wijzigen" Margin="10,0"/>
-				</StackLayout>
+					<CollectionView ItemsSource="{Binding Users}">
+						<CollectionView.ItemTemplate>
+							<DataTemplate x:DataType="model:User">
 
+									<FlexLayout Direction="Column">
+										<Label Text="{Binding Name, StringFormat='Naam: {0}'}" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Geboortedatum: {dd-mm-yyyy}" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Adres:" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Plaats:" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Postcode: {1234AB}" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Provincie:" FontSize="Default" TextColor="{StaticResource Text}"/>
+										<Label Text="Aanal auto's: " FontSize="Default" TextColor="{StaticResource Text}"/>
+									</FlexLayout>
+
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
+				</StackLayout>
 				<StackLayout>
 					<Label Text="" FontSize="Default" TextColor="White"/>
 					<Label Text="Auto's" FontSize="Title" TextColor="Black"/>
-					<ListView ItemsSource="{Binding Cars}" BackgroundColor="Transparent">
-						<ListView.ItemTemplate>
-							<DataTemplate>
-								<ViewCell>
+					<CollectionView ItemsSource="{Binding Cars}" BackgroundColor="Transparent">
+						<CollectionView.ItemTemplate>
+							<DataTemplate x:DataType="model:Car">
+
 									<FlexLayout Direction="Column" BackgroundColor="Transparent">
 										<Label Text="{Binding Merk, StringFormat='Merk: {0} '}" TextColor="Black" FontSize="Default"/>
 										<Label Text="{Binding Uitvoering, StringFormat='Uitvoering: {0}'}" TextColor="Black" FontSize="Default"/>
 									</FlexLayout>
-								</ViewCell>
+
 							</DataTemplate>
-						</ListView.ItemTemplate>
-					</ListView>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
 									
 				</StackLayout>
-                
-                
-            </StackLayout>
+
+				
+
+			</StackLayout>
 		</Grid>
 	</ScrollView>
 

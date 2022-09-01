@@ -13,5 +13,11 @@ namespace WeekMCCapp.Views
 			InitializeComponent();
             this.BindingContext = new GegevensViewModel();
 		}
+
+        /*protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await (BindingContext as GegevensViewModel).GetData();
+        }*/
     }
 }

@@ -26,7 +26,7 @@ namespace WeekMCCapp.Views
 
 			try
 			{
-				if (Regex.IsMatch(args.NewTextValue, "[0-9]*"))
+				if (!string.IsNullOrWhiteSpace(args.NewTextValue))
 				{
 					int number = int.Parse(args.NewTextValue);
 
@@ -47,9 +47,13 @@ namespace WeekMCCapp.Views
 						AwnserText += args.NewTextValue;
 					}
 					Awnser.Text = AwnserText;
+				}else
+				{
+					AwnserText = "Fizz, Buzz or FizzBuzz?";
 				}
 			}catch(Exception e)
 			{
+				AwnserText = "Fizz, Buzz or FizzBuzz?";
 				Console.WriteLine(e.ToString());
 			}
 		}

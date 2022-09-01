@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
 using WeekMCCapp.Models;
 
@@ -10,9 +11,22 @@ namespace WeekMCCapp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+		private static Database database;
 
+		public static Database Database
+		{
+			get
+			{
+				if (database == null)
+				{
+					database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "appdatabase.db3"));
+				}
 
-        bool isBusy = false;
+				return database;
+			}
+		}
+
+		bool isBusy = false;
         public bool IsBusy
         {
             get { return isBusy; }
